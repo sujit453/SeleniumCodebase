@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="TestCase1">
+  <parameter name="browser" value="chrome"></parameter>
+    <classes>
+      <class name="SeleniumPkg.DataProviderTest">
+      <methods>
+      <exclude name="testDDT"></exclude>
+      </methods>
+      </class>
+    </classes>
+  </test>
+   <test thread-count="5" name="TestCase2">
+   <parameter name="browser" value="ie"></parameter>
+    <classes>
+      <class name="SeleniumPkg.DataProviderTest">
+       <methods>
+      <exclude name="testDDT"></exclude>
+      </methods>
+      </class>
+    </classes>
+  </test>
+   <test thread-count="5" name="TestCase3">
+   <parameter name="browser" value="firefox"></parameter>
+     <classes>
+      <class name="SeleniumPkg.DataProviderTest">
+       <methods>
+       <!--  <include name="testLoginDemoableShop"></include> -->
+      <exclude name="testDDT"></exclude>
+      </methods>
+      </class>
+    </classes>
+  </test> 
+</suite>
